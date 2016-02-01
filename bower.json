@@ -2,7 +2,7 @@
 	"name": "RequireJS Starter",
 	"version": "1.0.0",
 	"dependencies": {
-		"backbone-amd": "^1.0.0",
+		"backbone-amd": "^1.1.0",
 		"underscore-amd": "^1.5.2",
 		"requirejs": "^2.1.22",
 		"bootstrap": "^3.3.6"
