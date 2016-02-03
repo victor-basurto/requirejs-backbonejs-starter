@@ -1,4 +1,9 @@
 require.config({
+	shim: {
+		'bootstrap': {
+			'deps': [ 'jquery' ]
+		}
+	},
 	paths: {
 		'jquery': './libs/jquery/dist/jquery',
 		'underscore': './libs/underscore-amd/underscore-min',
@@ -8,6 +13,9 @@ require.config({
 });
 
 
-require(['./views/app'], function( AppView ) {
+require([ './views/app', './models/todo' ], function( AppView, TodoModel ) {
 	new AppView;
+	var todoModel = new TodoModel();
+
+	console.log('Content from the model: ' + todoModel.get('content'));
 });
